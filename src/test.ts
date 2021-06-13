@@ -1,5 +1,5 @@
-function test (): number {
-  return 25
+function test (param: string): string {
+  return 'Bienvenido a : ' + param
 }
 
-test()
+console.log(test('Hola mundo'))

@@ -11,8 +11,8 @@ describe('RegisterVehicle', () => {
       }
     }
     const httpResponse = sut.handle(httpRequest)
-    expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('error in the: name'))
+    expect(httpResponse?.statusCode).toBe(400)
+    expect(httpResponse?.body).toEqual(new Error('error in the: name'))
   })
 
   test('if the model does not exist return 400', () => {
@@ -25,7 +25,7 @@ describe('RegisterVehicle', () => {
       }
     }
     const httpResponse = sut.handle(httpRequest)
-    expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toEqual(new Error('error in the: model'))
+    expect(httpResponse?.statusCode).toBe(400)
+    expect(httpResponse?.body).toEqual(new Error('error in the: model'))
   })
 })

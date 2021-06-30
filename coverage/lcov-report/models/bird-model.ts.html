@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for models/contract-model.ts</title>
+    <title>Code coverage report for models/bird-model.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">models</a> contract-model.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">models</a> bird-model.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>33/33</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>33/33</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
@@ -88,16 +88,12 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -123,37 +119,35 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IContractor } from '../interfaces/IContract'
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { IBird } from '../interfaces/IBird'
 &nbsp;
-export class ContractModel {
-  constructor (public contract: IContractor) {
-    Object.assign(this, contract)
+export class Bird {
+  constructor (public ibird: IBird) {
+    Object.assign(this, ibird)
   }
 &nbsp;
-  getId (): string {
-    return this.contract.id
-  }
-&nbsp;
-  getDateInit (): Date {
-    return this.contract.date_init
-  }
-&nbsp;
-  getExpirationDate (): Date {
-    return this.contract.expiration_date
-  }
-&nbsp;
-  getMonth (): number {
-    return this.contract.month
-  }
-&nbsp;
-  getMonthlyCost (): number {
-    return this.contract.monthlyCost
+  fly () {
+    return this.ibird.name
   }
 }
 &nbsp;
-export class ContractPrime extends ContractModel {
-  monthlyDiscount (): number {
-    return this.contract.monthlyCost * 0.10
+export class Eagle extends Bird {
+  fly () {
+    return this.ibird.name
+  }
+}
+&nbsp;
+export class Penguin extends Bird {
+  fly (): any {
+    return new Error('No puede volar')
+  }
+&nbsp;
+  walk () {
+    return 'Puedo caminar'
+  }
+&nbsp;
+  swim () {
+    return 'Puedo nadar'
   }
 }
 &nbsp;</pre></td></tr></table></pre>

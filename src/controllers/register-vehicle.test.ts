@@ -1,4 +1,4 @@
-import { RegisterVehicle } from '../controllers/register-vehicle'
+import { RegisterVehicle } from './register-vehicle'
 import { MissingFormalParameter } from '../errors/client-error'
 
 describe('RegisterVehicle', () => {
